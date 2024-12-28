@@ -2,6 +2,8 @@ version: "3"
 services:
   database:
     image: postgis/postgis:latest
+    ports:
+      - 5432:5432
     volumes:
       - ./directus-postgresql-data:/var/lib/postgresql/data
     environment:
